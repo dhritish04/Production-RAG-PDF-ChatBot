@@ -1,0 +1,14 @@
+📦 Requirements
+nginx
+Copy
+Edit
+fastapi
+uvicorn
+langchain
+sentence-transformers
+faiss-cpu
+transformers
+huggingface_hub
+PyMuPDF
+nltk
+python-dotenv
