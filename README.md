@@ -97,8 +97,7 @@ Form field: q (your question)
 
 ### 📬 Example API Output
 json
-Copy
-Edit
+```
 {
   "response": "Retrieval-Augmented Generation (RAG) is a technique that combines document retrieval with large language models...",
   "sources": [
@@ -106,6 +105,8 @@ Edit
     {"doc": "LangChain_Guide.pdf", "page": 7}
   ]
 }
+
+```
 
 ### 📦 Requirements
 
