@@ -16,7 +16,7 @@ Built for **production-readiness**, it integrates modern NLP tools like **LangCh
 ---
 
 ## 🧱 Project Structure
-'''
+```
 pdf_rag_chatbot/
 ├── app/
 │   ├── main.py            # FastAPI API endpoints
@@ -33,7 +33,7 @@ pdf_rag_chatbot/
 ├── .env                   # Hugging Face API token
 ├── requirements.txt
 ├── README.md
-'''
+```
 
 
 ---
@@ -109,6 +109,7 @@ Edit
 
 ### 📦 Requirements
 
+```
 fastapi
 uvicorn
 langchain
@@ -119,5 +120,4 @@ huggingface_hub
 PyMuPDF
 nltk
 python-dotenv
-
-
+```
