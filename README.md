@@ -1,21 +1,22 @@
-🚀 Production-Grade PDF RAG Chatbot with FastAPI, LangChain, FAISS & HuggingFace
-This project is a modular, intelligent Retrieval-Augmented Generation (RAG) chatbot that can answer complex queries from one or more PDFs. Built for production-readiness, it integrates modern NLP tools like LangChain, Hugging Face Transformers, and FAISS with a clean FastAPI backend.
+# 🚀 Production-Grade PDF RAG Chatbot  
+### FastAPI | LangChain | FAISS | HuggingFace
 
-🧠 Why This Project Stands Out
-✅ Robust and modular codebase
+This project is a modular, intelligent **Retrieval-Augmented Generation (RAG) chatbot** that can answer complex queries from one or more PDFs.  
+Built for **production-readiness**, it integrates modern NLP tools like **LangChain**, **Hugging Face Transformers**, and **FAISS** with a clean **FastAPI backend**.
 
-✅ Uses modern LLMs (Mistral-7B via Hugging Face Hub)
+---
 
-✅ Streamlined PDF-to-Answer pipeline with LangChain
+## 🧠 Why This Project Stands Out
+- ✅ Robust and modular codebase  
+- ✅ Uses modern LLMs (**Mistral-7B via Hugging Face Hub**)  
+- ✅ Streamlined **PDF-to-Answer pipeline** with LangChain  
+- ✅ Real-time **API interface** with file upload & query support  
+- ✅ Easily extensible: agents, metadata filtering, summarization, memory  
 
-✅ Real-time API interface with file upload and query support
+---
 
-✅ Easily extensible: agent routing, metadata filtering, summarization, memory
-
-🧱 Project Structure
-graphql
-Copy
-Edit
+## 🧱 Project Structure
+'''
 pdf_rag_chatbot/
 ├── app/
 │   ├── main.py            # FastAPI API endpoints
@@ -32,84 +33,69 @@ pdf_rag_chatbot/
 ├── .env                   # Hugging Face API token
 ├── requirements.txt
 ├── README.md
-🌟 Key Features
-📄 Ask Anything From Your PDFs
-Upload one or more PDFs
+'''
 
-Text is chunked intelligently using LangChain
 
-Top-k relevant chunks are retrieved via FAISS
+---
 
-Answer generated using Mistral-7B-Instruct (Hugging Face)
+## 🌟 Key Features
 
-🧩 Modular and Maintainable Design
-LangChain handles document loading, chunking, embeddings, retrieval
+### 📄 Ask Anything From Your PDFs
+- Upload one or more PDFs  
+- Text is chunked intelligently using LangChain  
+- Top-k relevant chunks retrieved via FAISS  
+- Answers generated using **Mistral-7B-Instruct**  
 
-Easy plug-and-play LLM support via model.py
+### 🧩 Modular & Maintainable Design
+- LangChain handles document loading, chunking, embeddings, retrieval  
+- Plug-and-play LLMs via `model.py`  
+- VectorDB abstracted through FAISS wrapper  
+- FastAPI decouples upload/query endpoints  
 
-VectorDB abstracted through LangChain's FAISS wrapper
+### 🧠 Multi-Turn Chat Support
+- Add **conversation memory** to maintain context  
+- Ideal for interviews, follow-ups, exploratory Q&A  
 
-FastAPI decouples upload/query endpoints
+### 🗂️ Metadata-Aware Retrieval
+- Chunks tagged with **document name + page number**  
+- Filter answers by source  
+- Full answer traceability  
 
-🧠 Multi-Turn Chat Support
-Add conversation memory to maintain context
+### 🤖 Smart Agent-Orchestrated Behavior
+- LangChain Agents decide whether to:  
+  - Answer a query  
+  - Summarize a PDF  
+  - Route to other tools  
+- Modular tools extend easily (QA, summarizer, etc.)  
 
-Ideal for interviews, follow-ups, and exploratory Q&A
+---
 
-🗂️ Metadata-Aware Retrieval
-Chunks tagged with document name, page number
+## ⚙️ Setup Instructions
 
-Filter answers by source
-
-Trace every answer back to where it came from
-
-🤖 Smart Agent-Orchestrated Behavior
-Use LangChain agents to decide whether to:
-
-Answer a query
-
-Summarize a PDF
-
-Route to other tools
-
-Tools are modular and extendable (e.g., QA, summarizer)
-
-⚙️ Setup Instructions
-1. Clone and Install Dependencies
-bash
-Copy
-Edit
+### 1️⃣ Clone and Install
 git clone https://github.com/ari2612sarkar/Production_RAG_PDF_ChatBOT
 cd Production_RAG_PDF_ChatBOT
 pip install -r requirements.txt
-2. Add Your HuggingFace Token
-Create a .env file in the root:
 
-ini
-Copy
-Edit
+### 2️⃣ Add Your HuggingFace Token
+Create a .env file in the root:
 HUGGINGFACEHUB_API_TOKEN=your_token_here
-3. Run the FastAPI Backend
-bash
-Copy
-Edit
+
+### 3️⃣ Run the FastAPI Backend
 uvicorn app.main:app --reload
 Or start the interactive frontend:
-
-bash
-Copy
-Edit
 streamlit run streamlit_app.py
-🚀 Try It Out
+
+### 🚀 Try It Out
 Upload PDF
 POST /upload/
 Form field: file (PDF file)
 
-Ask a Question
+### Ask a Question
 POST /query/
 Form field: q (your question)
 
-📬 Example API Output
+### 📬 Example API Output
 json
 Copy
 Edit
@@ -120,10 +106,9 @@ Edit
     {"doc": "LangChain_Guide.pdf", "page": 7}
   ]
 }
-📦 Requirements
-nginx
-Copy
-Edit
+
+### 📦 Requirements
+
 fastapi
 uvicorn
 langchain
@@ -135,6 +120,4 @@ PyMuPDF
 nltk
 python-dotenv
 
-🧠 Built For RMgX
-This chatbot was developed as part of the RMgX AI Developer Assignment, with clean modularization, agent tooling, multi-level abstraction, and best practices in LLM-based application engineering.
 
