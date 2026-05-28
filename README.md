@@ -81,6 +81,7 @@ pip install -r requirements.txt
 Create a .env file in the root:
 GROQ_API_KEY=your_groq_api_key_here
 
+
 ### 3️⃣ Run the FastAPI Backend
 uvicorn app.main:app --reload
 Or start the interactive frontend:
