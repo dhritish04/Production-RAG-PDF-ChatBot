@@ -30,6 +30,6 @@ if st.button("Submit") and query:
         if response.status_code == 200:
             result = response.json()
             st.success("✅ Answer:")
-            st.markdown(result["response"])
+            st.markdown(result["answer"])
         else:
             st.error(f"❌ Error: {response.text}")

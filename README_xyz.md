@@ -73,13 +73,13 @@ pdf_rag_chatbot/
 ## ⚙️ Setup Instructions
 
 ### 1️⃣ Clone and Install
-git clone https://github.com/dhritish04/Production-RAG-PDF-ChatBot
+git clone https://github.com/ari2612sarkar/Production_RAG_PDF_ChatBOT
 cd Production_RAG_PDF_ChatBOT
 pip install -r requirements.txt
 
 ### 2️⃣ Add Your HuggingFace Token
 Create a .env file in the root:
-GROQ_API_KEY=your_groq_api_key_here
+HUGGINGFACEHUB_API_TOKEN=your_token_here
 
 ### 3️⃣ Run the FastAPI Backend
 uvicorn app.main:app --reload

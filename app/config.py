@@ -1,0 +1,1 @@
+INDEX_DIR = "vector_store"
